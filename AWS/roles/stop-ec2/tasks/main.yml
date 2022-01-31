@@ -1,5 +1,6 @@
 ---
-- name: Search ec2
+#- name: Search ec2
+- hosts: localhost
   ec2_remote_facts:
     filters:
     tag:Name: localhost
