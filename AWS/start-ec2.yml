@@ -2,7 +2,7 @@
 #About: This will stop-ec2
 #
 ---
-- hosts: localhost
+- hosts: 161.156.81.32
   connection: local
   gather_facts: True
   roles:
