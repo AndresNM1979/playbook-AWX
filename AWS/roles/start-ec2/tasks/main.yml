@@ -1,5 +1,5 @@
 ---
-- name: Search ec2
+- name: Search_ec2
   ec2_remote_facts:
     filters:
       "tag:Name": "{{hostname}}"
@@ -8,7 +8,7 @@
     region: "{{aws_region}}"
   register: ec2info
 
-- name: Start ec2 instance
+- name: Start_ec2_instance
   ec2:
     instance_ids: "{{ec2info.instances[0].id}}"
     region: "{{ec2info.instances[0].region}}"
