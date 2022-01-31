@@ -1,20 +1,21 @@
 ---
-#- name: Search ec2
 - hosts: localhost
-  ec2_remote_facts:
-    filters:
-    tag:Name: localhost
-    #hosts: 18.219.188.61
-    aws_access_key: "{{aws_access_key}}"
-    aws_secret_key: "{{aws_secret_key}}"
-    region: us-east-2c
-  register: ec2info
+    - name: Search ec2
 
-- name: Stop ec2 instance
-  ec2:
-    instance_ids: i-0ea501779972cc941
-    region: ec2info
-    aws_access_key: "{{aws_access_key}}"
-    aws_secret_key: "{{aws_secret_key}}"
-    state: stopped
-    wait: True
+      ec2_remote_facts:
+        filters:
+        tag:Name: localhost
+    #hosts: 18.219.188.61
+        aws_access_key: "{{aws_access_key}}"
+        aws_secret_key: "{{aws_secret_key}}"
+        region: us-east-2c
+      register: ec2info
+
+    - name: Stop ec2 instance
+      ec2:
+        instance_ids: i-0ea501779972cc941
+        region: ec2info
+        aws_access_key: "{{aws_access_key}}"
+        aws_secret_key: "{{aws_secret_key}}"
+        state: stopped
+        wait: True
