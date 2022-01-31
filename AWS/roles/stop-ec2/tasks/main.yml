@@ -2,10 +2,10 @@
 - name: Search ec2
   ec2_remote_facts:
     filters:
-      "tag:Name": "{{hostname}}"
+    tag:Name: "{{hostname}}"
     aws_access_key: "{{aws_access_key}}"
     aws_secret_key: "{{aws_secret_key}}"
-    region: "{{aws_region}}"
+    region: us-east-2c
   register: ec2info
 
 - name: Stop ec2 instance
