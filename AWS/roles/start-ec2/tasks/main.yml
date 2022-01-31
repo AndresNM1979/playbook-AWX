@@ -2,7 +2,7 @@
 - name: Search ec2
   ec2_remote_facts:
     filters:
-      "tag:Name": "{{18.219.188.61}}"
+      "tag:Name": "{{ec2-18-219-188-61.us-east-2.compute.amazonaws.com}}"
     aws_access_key: "{{aws_access_key}}"
     aws_secret_key: "{{aws_secret_key}}"
     region: "{{aws_region}}"
