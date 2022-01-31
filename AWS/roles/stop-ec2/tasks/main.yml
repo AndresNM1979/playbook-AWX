@@ -2,7 +2,7 @@
 - name: Search ec2
   ec2_remote_facts:
     filters:
-    tag:Name: "{{hostname}}"
+    tag:Name: localhost
     aws_access_key: "{{aws_access_key}}"
     aws_secret_key: "{{aws_secret_key}}"
     region: us-east-2c
@@ -10,8 +10,8 @@
 
 - name: Stop ec2 instance
   ec2:
-    instance_ids: "{{ec2info.instances[0].id}}"
-    region: "{{ec2info.instances[0].region}}"
+    instance_ids: i-0ea501779972cc941
+    region: ec2info
     aws_access_key: "{{aws_access_key}}"
     aws_secret_key: "{{aws_secret_key}}"
     state: stopped
