@@ -3,16 +3,17 @@
   ec2_remote_facts:
     filters:
       "tag:Name": "{{hostname}}"
-    aws_access_key: "{{aws_access_key}}"
-    aws_secret_key: "{{aws_secret_key}}"
-    region: "{{aws_region}}"
+    aws_access_key: "leP?pisEjt;zubs74H-WR4)kyw&4CT)"
+    aws_secret_key: "leP?pisEjt;zubs74H-WR4)kyw&4CT)"
+    region: "ids: "i-0ea501779972cc941"
+    region: "us-east-2c"
   register: ec2info
 
 - name: Start_ec2_instance
   ec2:
-    instance_ids: "{{ec2info.instances[0].id}}"
-    region: "{{ec2info.instances[0].region}}"
-    aws_access_key: "{{aws_access_key}}"
-    aws_secret_key: "{{aws_secret_key}}"
+    instance_ids: "i-0ea501779972cc941"
+    region: "us-east-2c"
+    aws_access_key: "WleP?pisEjt;zubs74H-WR4)kyw&4CT)"
+    aws_secret_key: "WleP?pisEjt;zubs74H-WR4)kyw&4CT)"
     state: running
     wait: True
