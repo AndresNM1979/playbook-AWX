@@ -2,7 +2,7 @@
 - name: Search ec2
   ec2_remote_facts:
     filters:
-      "tag:Name": "{{hostname}}"
+      "tag:Name": "{{18.219.188.61}}"
     aws_access_key: "{{aws_access_key}}"
     aws_secret_key: "{{aws_secret_key}}"
     region: "{{aws_region}}"
