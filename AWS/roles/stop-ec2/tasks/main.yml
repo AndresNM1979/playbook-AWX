@@ -3,7 +3,7 @@
   ec2_remote_facts:
     filters:
     tag:Name: localhost
-    hosts: localhost
+    hosts: 18.219.188.61
     aws_access_key: "{{aws_access_key}}"
     aws_secret_key: "{{aws_secret_key}}"
     region: us-east-2c
